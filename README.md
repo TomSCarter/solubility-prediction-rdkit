@@ -1,6 +1,4 @@
-# README.md
-
-**Predicting Aqueous Solubility with RDKit and Scikit-learn**
+# Predicting Aqueous Solubility with RDKit and Scikit-learn
 
 A linear regression model predicting aqueous solubility from RDKit-derived molecular descriptors, trained on the Delaney (ESOL) dataset (Delaney, J. S. *J. Chem. Inf. Comput. Sci.* 2004, 44, 1000–1005; data via [DeepChem](https://github.com/deepchem/deepchem/blob/master/datasets/delaney-processed.csv)).
 
