@@ -14,4 +14,4 @@ Six descriptors (molecular weight, LogP, TPSA, H-bond donors/acceptors, rotatabl
 
 ## Requirements
 
-`pandas`, `rdkit`, `scikit-learn`, `seaborn`
+See requirements.txt
