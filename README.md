@@ -9,8 +9,14 @@ Six descriptors (molecular weight, LogP, TPSA, H-bond donors/acceptors, rotatabl
 ## Results
 
 - **R² = 0.74**, **RMSE = 1.11 log units**
-- LogP is by far the dominant predictor (coefficient ≈ -0.93), consistent with the expected relationship between lipophilicity and solubility
-- Prediction error shows only a weak overall correlation with LogP, but binning compounds by LogP shows the most lipophilic 20% have a distinctly higher median error than the rest of the set. This could be a limitation of a linear model at the extremes, but it could also reflect the inherent difficulty in measuring accurate solubilities on very poorly soluble compounds.
+- LogP has a negative coefficient (≈ −0.93 log units per LogP unit), consistent with more lipophilic compounds being less soluble. The descriptors weren't standardised, so the coefficients can't be compared directly to rank their importance.
+- Prediction error shows only a weak overall correlation with LogP, but binning compounds by LogP shows the most lipophilic 20% had a higher median error than the rest of the set in this train/test split. This could be a limitation of a linear model at the extremes, but it could also reflect the inherent difficulty in measuring accurate solubilities on very poorly soluble compounds.
+
+## Next steps
+
+- **Standardise the descriptors** so the coefficients can be compared directly, to show which descriptors contribute most to the prediction.
+- **Compare against Delaney's ESOL model** on the same test set, to see how this model performs relative to the published equation.
+- **Use cross-validation** instead of a single train/test split, to check whether the higher error for the most lipophilic compounds holds across different splits.
 
 ## Requirements
 
